@@ -1,0 +1,14 @@
+@for $i from 1 through 5 {
+    .mt-#{$i} {
+        margin-top: #{$i}rem;
+    }
+    .xp-#{$i} {
+        padding: #{$i}rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .xp-#{$i} {
+            padding: 2vw;
+        }
+    }
+} 

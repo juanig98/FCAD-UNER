@@ -1,0 +1,32 @@
+{
+  "name": "dgcs",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "homepage": "https://juanig98.github.io/dgycs2023",
+  "scripts": {
+    "start:parcel": "parcel src/index.html --port 3000 --open google-chrome",
+    "start:dev": "concurrently --kill-others \"npm run start:parcel\" \"npm run scss:dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss:dev": "sass --watch --update --style=expanded src/assets/scss:src/assets/css",
+    "scss:prod": "sass --no-source-map --style=compressed src/assets/scss:src/assets/css",
+    "build": "npm run scss:prod && parcel build src/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.23",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0",
+    "parcel": "^2.8.3",
+    "remixicon": "^3.2.0"
+  }
+}

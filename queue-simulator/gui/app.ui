@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>870</width>
+    <height>596</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simulador de colas</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>871</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_mms">
+     <attribute name="title">
+      <string>M/M/s</string>
+     </attribute>
+     <widget class="QLineEdit" name="input_arrival_rate_mms">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_num_servers_mms">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>90</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_simulate_mms">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_service_rate_mms">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mms">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>80</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_service_rate_mms">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_num_servers_mms">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Número de servidores:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_arrival_rate_mms">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_mms">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_view_images_mms">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>110</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver imágenes</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_q_finite_length">
+     <attribute name="title">
+      <string>Cola finita</string>
+     </attribute>
+     <widget class="QLabel" name="label_service_rate_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_num_servers_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Número de servidores:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_simulate_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_arrival_rate_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_service_rate_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>80</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_arrival_rate_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_num_servers_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>90</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_max_queue_length__finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tamaño máximo de la cola:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_max_queue_length_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>120</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_view_images_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>110</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver imágenes</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_population_finite">
+     <attribute name="title">
+      <string>Población finita</string>
+     </attribute>
+     <widget class="QLabel" name="label_population_size_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>201</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tamaño máximo de la población:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_num_servers_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>90</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_arrival_rate_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_service_rate_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_num_servers_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Número de servidores:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_service_rate_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_arrival_rate_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_population_size_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>120</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_simulate_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_view_images_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>110</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver imágenes</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_mg1">
+     <attribute name="title">
+      <string>M/G/1</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_simulate_mg1">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_average_service_time_mg1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>180</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo promedio de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_standard_dev_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>90</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_standard_dev_mg1_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>240</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Desvío estándar del tiempo de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_average_service_time_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>60</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mg1">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>80</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_arrival_rate_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_standard_dev_mg1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_mg1">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_mm1">
+     <attribute name="title">
+      <string>M/M/1</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_simulate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_service_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_service_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mm1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>80</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_arrival_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_arrival_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_mm1">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_settings">
+     <attribute name="title">
+      <string>Ajustes</string>
+     </attribute>
+     <widget class="QLabel" name="label_settings_round">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>111</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Redondeo (cifras):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_settings_round">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_results">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>209</y>
+      <width>871</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QListWidget" name="list_results">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>651</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 20px;</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="autoScroll">
+      <bool>true</bool>
+     </property>
+     <property name="itemAlignment">
+      <set>Qt::AlignLeading</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_results">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>20</y>
+       <width>191</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Esperando simulación...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>870</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>input_arrival_rate_mms</tabstop>
+  <tabstop>input_service_rate_mms</tabstop>
+  <tabstop>input_num_servers_mms</tabstop>
+  <tabstop>btn_simulate_mms</tabstop>
+  <tabstop>btn_clear_mms</tabstop>
+  <tabstop>input_arrival_rate_mm1</tabstop>
+  <tabstop>input_service_rate_mm1</tabstop>
+  <tabstop>btn_simulate_mm1</tabstop>
+  <tabstop>btn_clear_mm1</tabstop>
+  <tabstop>input_arrival_rate_mg1</tabstop>
+  <tabstop>input_average_service_time_mg1</tabstop>
+  <tabstop>input_standard_dev_mg1</tabstop>
+  <tabstop>btn_simulate_mg1</tabstop>
+  <tabstop>btn_clear_mg1</tabstop>
+  <tabstop>list_results</tabstop>
+  <tabstop>input_arrival_rate_finite_q_length</tabstop>
+  <tabstop>input_service_rate_finite_q_length</tabstop>
+  <tabstop>input_num_servers_finite_q_length</tabstop>
+  <tabstop>input_max_queue_length_finite_q_length</tabstop>
+  <tabstop>btn_simulate_finite_q_length</tabstop>
+  <tabstop>btn_clear_finite_q_length</tabstop>
+  <tabstop>input_arrival_rate_finite_population</tabstop>
+  <tabstop>input_service_rate_finite_population</tabstop>
+  <tabstop>input_num_servers_finite_population</tabstop>
+  <tabstop>input_population_size_finite_population</tabstop>
+  <tabstop>btn_simulate_finite_population</tabstop>
+  <tabstop>btn_clear_finite_population</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_clear_mms</sender>
+   <signal>clicked()</signal>
+   <receiver>input_service_rate_mms</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>403</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mms</sender>
+   <signal>clicked()</signal>
+   <receiver>input_arrival_rate_mms</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>401</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mms</sender>
+   <signal>clicked()</signal>
+   <receiver>input_num_servers_mms</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>450</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mm1</sender>
+   <signal>clicked()</signal>
+   <receiver>input_arrival_rate_mm1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>404</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>310</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mm1</sender>
+   <signal>clicked()</signal>
+   <receiver>input_service_rate_mm1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mm1</sender>
+   <signal>clicked()</signal>
+   <receiver>progress_bar_mm1</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>801</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mms</sender>
+   <signal>clicked()</signal>
+   <receiver>progress_bar_mms</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>802</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_q_length</sender>
+   <signal>clicked()</signal>
+   <receiver>input_arrival_rate_finite_q_length</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_q_length</sender>
+   <signal>clicked()</signal>
+   <receiver>input_service_rate_finite_q_length</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>409</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_q_length</sender>
+   <signal>clicked()</signal>
+   <receiver>input_num_servers_finite_q_length</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>270</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_q_length</sender>
+   <signal>clicked()</signal>
+   <receiver>input_max_queue_length_finite_q_length</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_q_length</sender>
+   <signal>clicked()</signal>
+   <receiver>progress_bar_finite_q_length</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>471</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>815</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_population</sender>
+   <signal>clicked()</signal>
+   <receiver>input_arrival_rate_finite_population</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_population</sender>
+   <signal>clicked()</signal>
+   <receiver>input_service_rate_finite_population</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_population</sender>
+   <signal>clicked()</signal>
+   <receiver>input_num_servers_finite_population</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>326</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_population</sender>
+   <signal>clicked()</signal>
+   <receiver>input_population_size_finite_population</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_finite_population</sender>
+   <signal>clicked()</signal>
+   <receiver>progress_bar_finite_population</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>470</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
